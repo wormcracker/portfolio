@@ -1,7 +1,6 @@
 # My Portfolio Website
 
-![Website Badge](https://img.shields.io/badge/Status-Live-brightgreen)  
-![Language Badge](https://img.shields.io/badge/Tech-HTML,CSS,JS-blue)
+![Website Badge](https://img.shields.io/badge/Status-Live-brightgreen)
 
 A personal portfolio website showcasing my skills, projects, and contact information. Built to provide a clean, responsive, and professional online presence.
 
@@ -21,7 +20,7 @@ A personal portfolio website showcasing my skills, projects, and contact informa
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript
+- **Frontend:** HTML5, CSS3, JavaScript, React, TailwindCss
 - **Optional Libraries/Frameworks:** TailwindCSS / Bootstrap / React (if used)
 - **Hosting:** GitHub Pages
 
