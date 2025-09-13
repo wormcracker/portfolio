@@ -1,0 +1,26 @@
+export const COLORS = {
+  light: {
+    bg: "bg-gradient-to-br from-[#f8fafc] via-[#e0e7ef] to-[#f1f5f9]",
+    text: "text-[#232946]",
+    accent: "text-[#5f6caf]",
+    card: "bg-white/90",
+    border: "border-[#e0e7ef]",
+    icon: "text-[#5f6caf]",
+    sketch: "text-[#eebbc3]",
+    note: "text-[#b8c1ec]",
+    scrollbar: "#b8c1ec",
+    scrollbarTrack: "#f1f5f9",
+  },
+  dark: {
+    bg: "bg-gradient-to-br from-[#181926] via-[#232946] to-[#232946]",
+    text: "text-[#f4f4fa]",
+    accent: "text-[#eebbc3]",
+    card: "bg-[#232946]/90",
+    border: "border-[#393e5c]",
+    icon: "text-[#eebbc3]",
+    sketch: "text-[#eebbc3]",
+    note: "text-[#b8c1ec]",
+    scrollbar: "#5f6caf",
+    scrollbarTrack: "#232946",
+  },
+};
