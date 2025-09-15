@@ -1,7 +1,7 @@
 export const User = {
   name: "sushant",
-  desc: "A passion for creating innovative web solutions. Strong foundation in [List Key Front-End Technologies]. Differentiates through understanding of backend architecture and practical experience in financial markets.",
-  extraDesc: "Always learning and growing.",
+  desc: "A wild obsession with crafting web solutions so innovative, they might just rewrite the internet. Solid grasp of [List Key Front-End Technologies], but really, the true magic lies in knowing how the backend works and having enough coffee to survive a day in the financial markets.",
+  extraDesc: "Always learning—probably because the internet is constantly updating its resume.",
   mail: "mailto:wormcrackerz@gmail.com",
 };
 
