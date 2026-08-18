@@ -107,6 +107,17 @@ export default function App() {
         .bg-texture {
           position: relative;
         }
+        .project-card {
+          position: relative;
+          transform: rotate(var(--card-rotate, 0deg)) translateZ(0);
+          transition: transform 0.2s ease;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+        .project-card:hover,
+        .project-card:focus-visible {
+          transform: rotate(var(--card-rotate, 0deg)) scale(1.03) translateZ(0);
+        }
         .bg-texture::before {
           content: "";
           position: fixed;
@@ -311,9 +322,9 @@ export default function App() {
               {PROJECTS.map((proj, i) => (
                 <div
                   key={proj.title}
-                  className={`rounded-xl p-3 sm:p-4 border ${colors.border} shadow-md transition-transform hover:scale-[1.03]`}
+                  className={`project-card rounded-xl p-3 sm:p-4 border ${colors.border} shadow-md`}
                   style={{
-                    transform: i % 2 === 0 ? "rotate(-2deg)" : "rotate(2deg)",
+                    "--card-rotate": i % 2 === 0 ? "-2deg" : "2deg",
                   }}
                   tabIndex={0}
                 >

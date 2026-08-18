@@ -16,14 +16,17 @@ function SketchyCard({
       className={`main-section relative ${className}`}
       style={{
         transform: perspective
-          ? `perspective(400px) rotateY(${rotate}deg) rotateZ(${rotate / 2}deg)`
-          : `rotate(${rotate}deg)`,
+          ? `perspective(1600px) rotateY(${rotate * 0.6}deg) rotateZ(${rotate / 2}deg) translateZ(0)`
+          : `rotate(${rotate}deg) translateZ(0)`,
         boxShadow: "0 4px 24px 0 rgba(90,90,120,0.10)",
         borderRadius: "1.2rem",
         border: "2px solid #eebbc3",
         background: "inherit",
         overflow: "hidden",
         willChange: tilt ? "transform" : undefined,
+        backfaceVisibility: "hidden",
+        WebkitBackfaceVisibility: "hidden",
+        transformStyle: "preserve-3d",
       }}
     >
       <div

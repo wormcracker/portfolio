@@ -7,7 +7,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { SOCIALS } from "../constants/data.js";
-import cv from "../assets/cv.pdf";
+import cv from "../assets/Sushant_Adhikari_CV.pdf";
+import CertificatesModal from "./CertificatesModal.jsx";
 
 const ICON_MAP = {
   FaGithub: <FaGithub />,
@@ -32,6 +33,7 @@ function SocialLinks({ colors }) {
           {ICON_MAP[s.icon]}
         </a>
       ))}
+      <CertificatesModal colors={colors} />
       <a
         href={cv}
         target="_blank"

@@ -4,17 +4,25 @@ export function useCardTilt(ref) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Crisp rendering: keep the element on its own GPU layer with a
+    // sane perspective depth so rotation doesn't force sub-pixel blur.
+    el.style.backfaceVisibility = "hidden";
+    el.style.WebkitBackfaceVisibility = "hidden";
+    el.style.transformStyle = "preserve-3d";
+    el.style.willChange = "transform";
+
     let rect = null;
     let ticking = false;
 
     function setTransform(x, y) {
-      const rotateX = ((y - rect.height / 2) / rect.height) * 8;
-      const rotateY = ((x - rect.width / 2) / rect.width) * -8;
-      el.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03,1.03,1)`;
+      const rotateX = ((y - rect.height / 2) / rect.height) * 6;
+      const rotateY = ((x - rect.width / 2) / rect.width) * -6;
+      el.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03,1.03,1) translateZ(0)`;
     }
 
     function reset() {
-      el.style.transform = "";
+      el.style.transform = "translateZ(0)";
     }
 
     function onMouseMove(e) {
@@ -44,6 +52,8 @@ export function useCardTilt(ref) {
     function onTouchEnd() {
       reset();
     }
+
+    reset();
 
     el.addEventListener("mousemove", onMouseMove);
     el.addEventListener("mouseleave", onMouseLeave);
